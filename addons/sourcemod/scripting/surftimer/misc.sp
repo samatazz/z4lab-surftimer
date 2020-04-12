@@ -3317,9 +3317,9 @@ public void CenterHudAlive(int client)
 						{
 							// fluffys
 							if (g_bPracticeMode[client])
-								Format(g_szLastSRDifference[client], 64, "SR: %s", g_szRecordMapTime);
+								Format(g_szLastSRDifference[client], 64, "SR: <font color='#b8a'>%s</font>", g_szRecordMapTime);
 							else
-								Format(g_szLastSRDifference[client], 64, "SR: %s", g_szRecordMapTime);
+								Format(g_szLastSRDifference[client], 64, "SR: <font color='#b8a'>%s</font>", g_szRecordMapTime);
 						}
 						else
 							Format(g_szLastSRDifference[client], 64, "SR: N/A");
@@ -4084,11 +4084,11 @@ public void GetSpeedColour(int client, int speed, int type)
 		else if (type == 3 && g_SpeedMode[client] == 0) // gain/loss
 		{
 			if (speed >= GetConVarInt(g_hMaxVelocity))
-				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#f564da");
+				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#f6d");
 			else if (g_iPreviousSpeed[client] < speed || g_iPreviousSpeed[client] == speed)
-				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#5cbeff");
+				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#5bf");
 			else
-				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#f73446");
+				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#f34");
 
 			g_iPreviousSpeed[client] = speed;
 		}
@@ -4115,11 +4115,11 @@ public void GetSpeedColour(int client, int speed, int type)
 		else if (type == 3 && g_SpeedMode[client] == 0) // gain/loss
 		{
 			if (speed >= GetConVarInt(g_hMaxVelocity))
-				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#f564da");
+				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#f6d");
 			else if (g_iPreviousSpeed[client] < speed || g_iPreviousSpeed[client] == speed)
-				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#5cbeff");
+				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#5bf");
 			else
-				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#f73446");
+				Format(g_szSpeedColour[client], sizeof(g_szSpeedColour), "#f34");
 			
 			g_iPreviousSpeed[client] = speed;
 		}
